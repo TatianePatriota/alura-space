@@ -1,1 +1,1 @@
-Projeto feito em react.
+Projeto feito em react e utilizando styled components para estilizar.
