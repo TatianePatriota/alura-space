@@ -11,6 +11,14 @@ body {
   background-image: linear-gradient(#041833, #154580);
   box-sizing: border-box;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
 `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
