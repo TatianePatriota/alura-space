@@ -23,6 +23,7 @@ const StyledTitle = styled.h1`
   height: 144px;
   top: 186px;
   left: 265px;
+  font-weight: 500;
 `;
 
 const StyledImage = styled.img`
