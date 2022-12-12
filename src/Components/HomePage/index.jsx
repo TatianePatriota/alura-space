@@ -19,7 +19,7 @@ const StyledTitle = styled.h1`
   z-index: 1;
   color: #d9d9d9;
   font-size: 2rem;
-  width: 435px;
+  width: 395px;
   height: 144px;
   top: 186px;
   left: 265px;
@@ -38,7 +38,7 @@ function HomePage() {
       <StyledMain>
         <StyledContainerMain>
           <Sidebar />
-          <StyledTitle>A galeria mais completa de fotos do espaço!</StyledTitle>
+          <StyledTitle>A galeria mais completa do espaço!</StyledTitle>
           <StyledImage
             src={banner}
             alt="Imagem da Terra vista do espaço"
