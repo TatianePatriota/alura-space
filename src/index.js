@@ -10,6 +10,8 @@ body {
   min-height: 100vh;
   background-image: linear-gradient(#041833, #154580);
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 li {
