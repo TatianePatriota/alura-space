@@ -19,11 +19,11 @@ const StyledTitle = styled.h1`
   z-index: 1;
   color: #d9d9d9;
   font-size: 2rem;
-  width: 275px;
+  width: 435px;
   height: 144px;
   top: 186px;
   left: 265px;
-  font-weight: 500;
+  font-weight: 700;
 `;
 
 const StyledImage = styled.img`
