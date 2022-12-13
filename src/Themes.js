@@ -8,5 +8,6 @@ export const theme = {
     lightGray: "#9d9d9d",
     textColor: " #d9d9d9",
     tagColor: "rgba(148, 163, 184, 0.3)",
+    black: "#000000",
   },
 };
