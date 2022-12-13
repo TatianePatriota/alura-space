@@ -27,7 +27,7 @@ const StyledSidebarItems = styled.li`
   &:first-child {
     a {
       font-weight: 700;
-      color: #7b78e5;
+      color: ${(props) => props.theme.colors.purple};
       font-family: "GandhiSansRegular";
     }
   }
@@ -42,7 +42,7 @@ const StyledSidebarImages = styled.img`
 
 const StyledSidebarAnchor = styled.a`
   font-size: 1.125rem;
-  color: #d9d9d9;
+  color: ${(props) => props.theme.colors.textColor};
   font-family: "GandhiSansRegular";
 `;
 
