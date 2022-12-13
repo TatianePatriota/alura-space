@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { theme } from "./Themes";
+import Footer from "./Components/Footer";
 
 const StyledGlobal = createGlobalStyle`
 
@@ -47,6 +48,7 @@ root.render(
     <ThemeProvider theme={theme}>
       <StyledGlobal />
       <App />
+      <Footer />
     </ThemeProvider>
   </React.StrictMode>
 );
