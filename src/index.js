@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { theme } from "./Themes";
 
 const StyledGlobal = createGlobalStyle`
 
@@ -9,10 +10,11 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-image: linear-gradient(#041833, #154580);
+  background-image: linear-gradient(${(props) =>
+    props.theme.colors.darkBlue}, ${(props) => props.theme.colors.lightBlue});
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-;
+
 }
 
 li {
@@ -28,20 +30,23 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: linear-gradient(#041833, #154580);
+  background: linear-gradient(${(props) => props.theme.colors.darkBlue}, ${(
+  props
+) => props.theme.colors.lightBlue});
 }
 body::-webkit-scrollbar-thumb {
   background-color: #154580;
   border-radius: 20px;
 }
 
-
 `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <StyledGlobal />
-    <App />
+    <ThemeProvider theme={theme}>
+      <StyledGlobal />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
