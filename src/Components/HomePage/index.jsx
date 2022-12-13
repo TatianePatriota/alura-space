@@ -17,7 +17,7 @@ const StyledContainerMain = styled.section`
 const StyledTitle = styled.h1`
   position: absolute;
   z-index: 1;
-  color: #d9d9d9;
+  color: ${(props) => props.theme.colors.textColor};
   font-size: 2rem;
   width: 395px;
   height: 144px;
