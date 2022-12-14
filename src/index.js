@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { theme } from "./Themes";
 import Footer from "./Components/Footer";
+import Galery from "./Components/Galery";
+import HomePage from "./Components/HomePage";
 
 const StyledGlobal = createGlobalStyle`
-
 body {
   margin: 0;
   padding: 0;
@@ -47,7 +47,8 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <StyledGlobal />
-      <App />
+      <HomePage />
+      <Galery />
       <Footer />
     </ThemeProvider>
   </React.StrictMode>
