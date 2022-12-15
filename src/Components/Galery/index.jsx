@@ -1,12 +1,25 @@
 import Tags from "../Tags";
+import styled from "styled-components";
+
+const StyledGalery = styled.section`
+  margin-left: 17%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+`;
+
+const StyledGaleryTitle = styled.h2`
+  font-size: 24px;
+  font-weight: 500;
+  color: ${(props) => props.theme.colors.purple};
+`;
 
 function Galery() {
   return (
-    <section>
-      <h2>Navegue pela galeria</h2>
+    <StyledGalery>
+      <StyledGaleryTitle>Navegue pela galeria</StyledGaleryTitle>
       <Tags />
       <ul></ul>
-    </section>
+    </StyledGalery>
   );
 }
 
