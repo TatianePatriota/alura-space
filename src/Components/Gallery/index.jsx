@@ -3,9 +3,10 @@ import styled from "styled-components";
 import Cards from "./Cards";
 
 const StyledGallery = styled.section`
-  margin-left: 17%;
+  margin-left: 13%;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  width: 75%;
 `;
 
 const StyledGalleryTitle = styled.h2`
