@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { theme } from "./Themes";
 import Footer from "./Components/Footer";
-import Galery from "./Components/Galery";
+import Gallery from "./Components/Gallery";
 import HomePage from "./Components/HomePage";
 
 const StyledGlobal = createGlobalStyle`
@@ -48,7 +48,7 @@ root.render(
     <ThemeProvider theme={theme}>
       <StyledGlobal />
       <HomePage />
-      <Galery />
+      <Gallery />
       <Footer />
     </ThemeProvider>
   </React.StrictMode>
