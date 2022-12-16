@@ -2,26 +2,26 @@ import Tags from "../Tags";
 import styled from "styled-components";
 import Cards from "./Cards";
 
-const StyledGalery = styled.section`
+const StyledGallery = styled.section`
   margin-left: 17%;
   margin-top: 1rem;
   margin-bottom: 2rem;
 `;
 
-const StyledGaleryTitle = styled.h2`
+const StyledGalleryTitle = styled.h2`
   font-size: 24px;
   font-weight: 500;
   color: ${(props) => props.theme.colors.purple};
 `;
 
-function Galery() {
+function Gallery() {
   return (
-    <StyledGalery>
-      <StyledGaleryTitle>Navegue pela galeria</StyledGaleryTitle>
+    <StyledGallery>
+      <StyledGalleryTitle>Navegue pela galeria</StyledGalleryTitle>
       <Tags />
       <Cards />
-    </StyledGalery>
+    </StyledGallery>
   );
 }
 
-export default Galery;
+export default Gallery;
