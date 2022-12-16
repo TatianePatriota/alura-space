@@ -3,7 +3,7 @@ import open from "../../../assets/open.png";
 import favorito from "../../../assets/favorito.png";
 import styled from "styled-components";
 
-const StyledGaleryItems = styled.li`
+const StyledGalleryItems = styled.li`
   background-color: ${(props) => props.theme.colors.darkBlue};
   border-radius: 17px;
   height: 280px;
@@ -49,7 +49,7 @@ const StyledContainerCredits = styled.div`
   width: 100%;
 `;
 
-const StyledGaleryList = styled.ul`
+const StyledGalleryList = styled.ul`
   padding: 0;
   display: flex;
   width: 100%;
@@ -65,10 +65,10 @@ const StyledGalleryIcons = styled.span`
 
 function Cards() {
   return (
-    <StyledGaleryList>
+    <StyledGalleryList>
       {photos.map((photo) => {
         return (
-          <StyledGaleryItems key={photo.id}>
+          <StyledGalleryItems key={photo.id}>
             <StyledGalleryImages src={photo.image} alt={photo.title} />
             <StyledDescriptionText>{photo.tag}</StyledDescriptionText>
             <StyledContainerCredits>
@@ -78,10 +78,10 @@ function Cards() {
                 <img src={open} alt="Ícone de abrir modal" />
               </StyledGalleryIcons>
             </StyledContainerCredits>
-          </StyledGaleryItems>
+          </StyledGalleryItems>
         );
       })}
-    </StyledGaleryList>
+    </StyledGalleryList>
   );
 }
 
