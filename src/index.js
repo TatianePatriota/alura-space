@@ -5,6 +5,7 @@ import { theme } from "./Themes";
 import Footer from "./Components/Footer";
 import Gallery from "./Components/Gallery";
 import HomePage from "./Components/HomePage";
+import Popular from "./Components/Popular";
 
 const StyledGlobal = createGlobalStyle`
 body {
@@ -48,6 +49,7 @@ root.render(
     <ThemeProvider theme={theme}>
       <StyledGlobal />
       <HomePage />
+      <Popular />
       <Gallery />
       <Footer />
     </ThemeProvider>
