@@ -49,8 +49,8 @@ root.render(
     <ThemeProvider theme={theme}>
       <StyledGlobal />
       <HomePage />
-      <Popular />
       <Gallery />
+      <Popular />
       <Footer />
     </ThemeProvider>
   </React.StrictMode>
