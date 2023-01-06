@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import photos from "../Gallery/photos.json";
 
 const StyledTags = styled.div`
   width: 65vw;
@@ -13,10 +14,9 @@ const StyledTextTag = styled.p`
 `;
 
 const StyledTextList = styled.ul`
-  width: 380px;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const StyledTextItems = styled.li`
@@ -24,17 +24,24 @@ const StyledTextItems = styled.li`
   padding: 6px 10px;
   border-radius: 8px;
   cursor: pointer;
+  margin-right: 15px;
 `;
 
-function Tags() {
+function Tags({ tags, filterPhotos, setItems }) {
   return (
     <StyledTags>
       <StyledTextTag>Busque por tags:</StyledTextTag>
       <StyledTextList>
-        <StyledTextItems>Estrelas</StyledTextItems>
-        <StyledTextItems>Galáxias</StyledTextItems>
-        <StyledTextItems>Lua</StyledTextItems>
-        <StyledTextItems>Planetas</StyledTextItems>
+        {tags.map((tag) => {
+          return (
+            <StyledTextItems key={tag} onClick={() => filterPhotos(tag)}>
+              {tag}
+            </StyledTextItems>
+          );
+        })}
+        <StyledTextItems onClick={() => setItems(photos)}>
+          Todas
+        </StyledTextItems>
       </StyledTextList>
     </StyledTags>
   );
