@@ -1,6 +1,8 @@
 import Tags from "../Tags";
 import styled from "styled-components";
 import Cards from "./Cards";
+import { useState } from "react";
+import photos from "./photos.json";
 
 const StyledGallery = styled.section`
   margin-left: 13%;
@@ -16,11 +18,22 @@ const StyledGalleryTitle = styled.h2`
 `;
 
 function Gallery() {
+  const [items, setItems] = useState(photos);
+  const tags = [...new Set(photos.map((value) => value.tag))];
+
+  const filterPhotos = (tag) => {
+    const newPhotos = photos.filter((photo) => {
+      return photo.tag === tag;
+    });
+    setItems(newPhotos);
+    console.log(newPhotos);
+  };
+
   return (
     <StyledGallery>
       <StyledGalleryTitle>Navegue pela galeria</StyledGalleryTitle>
-      <Tags />
-      <Cards />
+      <Tags tags={tags} filterPhotos={filterPhotos} setItems={setItems} />
+      <Cards items={items} />
     </StyledGallery>
   );
 }
