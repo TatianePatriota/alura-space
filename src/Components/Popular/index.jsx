@@ -21,7 +21,7 @@ const StyledPopularList = styled.ul`
 `;
 
 const StyledPopularButton = styled.button`
-  margin-top: 12.5rem;
+  margin-top: 15.5rem;
   background: transparent;
   border: none;
   border: 2px solid ${(props) => props.theme.colors.pink};
@@ -68,6 +68,10 @@ const StyledPopularTitle = styled.h2`
   margin-top: 7rem;
 `;
 
+const StyledPopularItems = styled.li`
+  margin-bottom: 10px;
+`;
+
 function Popular() {
   return (
     <StyledPopularContainer>
@@ -75,9 +79,9 @@ function Popular() {
       <StyledPopularList>
         {popularPhotos.map((photoPopular) => {
           return (
-            <li key={photoPopular.id}>
+            <StyledPopularItems key={photoPopular.id}>
               <img src={photoPopular.path} alt={photoPopular.alt} />
-            </li>
+            </StyledPopularItems>
           );
         })}
       </StyledPopularList>
