@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { theme } from "./Themes";
 import Footer from "./Components/Footer";
 import Gallery from "./Components/Gallery";
@@ -43,14 +43,20 @@ body::-webkit-scrollbar-thumb {
 
 `;
 
+const StyledMainContainer = styled.div`
+  display: flex;
+`;
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <StyledGlobal />
       <HomePage />
-      <Gallery />
-      <Popular />
+      <StyledMainContainer>
+        <Gallery />
+        <Popular />
+      </StyledMainContainer>
       <Footer />
     </ThemeProvider>
   </React.StrictMode>
